@@ -8,6 +8,8 @@
 
 import React, {Component} from 'react';
 import {Platform, StyleSheet, Text, View} from 'react-native';
+import FormComponent from './FormComponent';
+
 
 const instructions = Platform.select({
   ios: 'Press Cmd+R to reload,\n' + 'Cmd+D or shake for dev menu',
@@ -16,14 +18,31 @@ const instructions = Platform.select({
     'Shake or press menu button for dev menu',
 });
 
-type Props = {};
-export default class App extends Component<Props> {
+export default class App extends Component {
+  constructor(props) {
+    super(props);
+
+    // this.state = {
+    //   data: ['Multiple Sclerosis', 'Everything Else'],
+    //   desc: "Looks like you're new to App! Get started by filling out some basic medical data below.",
+    //   subtitle: 'Basic Diagnoses',
+    //   backButton: false
+    // }
+
+    this.state = {
+      data: ['Cognitive Difficulties', 'Vision Problems', 'Fatigue', 'Heat Sensitivity', 
+        'Bowel and Bladder Problems', 'Sexual Issues', 'Pain', 'Motor Problems'],
+      desc: 'Please specify the symptoms you are experiencing so we can create a more individualized match for you.',
+      subtitle: 'Multiple Sclerosis Symptoms',
+      backButton: true
+    }
+    
+  }
+
   render() {
     return (
-      <View style={styles.container}>
-        <Text style={styles.welcome}>Welcome to React Native!</Text>
-        <Text style={styles.instructions}>To get started, edit App.js</Text>
-        <Text style={styles.instructions}>{instructions}</Text>
+      <View>
+        <FormComponent data= {this.state.data} desc={this.state.desc} subtitle={this.state.subtitle} backButton={this.state.backButton}></FormComponent>
       </View>
     );
   }
