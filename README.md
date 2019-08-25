@@ -8,7 +8,7 @@ Empowering individuals to build communities.
 </html>  
 
 |[Daniel Davies](https://github.com/Daniel-Davies)|[Taneisha Arora](https://github.com/TaneishaArora)| [Theja Krishna](https://github.com/takrishn) | 
-|--|--|--|--| 
+|--|--|--|
 
 ## Awards 🏆
 "Best Mobile/Web App" presented by Amazon Web Services
